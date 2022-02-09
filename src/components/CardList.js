@@ -10,7 +10,7 @@ const CardList = ({robots}) => {
                         // console.log(user)
                     return (
                         <Card 
-                            key={user.id} //key這個屬性應該是一個獨特、不會改變的值，如果這個項目被移除，也不會影響其他的資料
+                            key={user.id} 
                             name={user.name} 
                             email={user.email}
                         />

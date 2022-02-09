@@ -7,7 +7,7 @@ const SearchBox = ({searchfield, searchChange}) => {
                    type="search" 
                    placeholder="search robots" 
                    onChange={searchChange}  
-                   //callback function，所以沒加()，onChange事件發生時，才啟動function
+                  
             />
         </div>
     )

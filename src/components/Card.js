@@ -1,5 +1,4 @@
 import react from 'react'
-//即使沒有用到react，還是要import，才能使用JSX
 
 const Card = ({name, email})=>{
     // console.log(id, username, name, email)

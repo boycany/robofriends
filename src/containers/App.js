@@ -18,26 +18,16 @@ class App extends Component {
     }
 
     componentDidMount(){
-        fetch('https://jsonplaceholder.typicode.com/users') //fetch是window物件內建的方法，
-                                                            //現在的瀏覽器都內建window.fetch()，幫助我們request東西的工具
+        fetch('https://jsonplaceholder.typicode.com/users') 
         .then(response=>response.json())
-        .then (users=>this.setState({robots:users}))//state改變了，所以會開始進入update的life cycle。
-                                                    //如果console log 印出順序的話，會發現順序是：
-                                                    //constructor (robots空陣列)--> render (渲染出無畫面)--> 
-                                                    //componentDidMount (接收到state改變，robots屬性有資料進來)
-                                                    // --> render (渲染出畫面)
+        .then (users=>this.setState({robots:users}))
         // console.log('componentDidMount')
     }
 
-    onSearchChange = (event) =>{   //class裡的自訂function要用箭頭函式的寫法
-        // console.log(event)
+    onSearchChange = (event) =>{  
         // console.log(event.target.value)
 
-        this.setState({ searchfield: event.target.value })
-        // 要改變state的話，使用.setState()。 不像直覺是寫this.stae.searchfield = 
-      
-
-        // console.log(filteredRobots)
+        this.setState({ searchfield: event.target.value })      
     }
 
     render(){
@@ -62,13 +52,4 @@ class App extends Component {
     }   
 }    
 
-/*
-
-現在App有兩個分支 ----> SearchBox 
-                ----> CardList ----> Card
-
-SearchBox需要跟CardList互相溝通，方式是得
-將資訊傳給它的parent:App，再交給App將資料傳給 CardList
-
-*/
 export default App;

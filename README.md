@@ -12,7 +12,7 @@
 
 ## 系統說明
 
-框架：React
+框架：React <br>
 樣式：Tachyons https://tachyons.io/
 
 * React 版本 `v17.0.2`
